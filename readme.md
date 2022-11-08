@@ -4,7 +4,7 @@ This is the repository of our IJCAI 2022 paper Control Globally, Understand Loca
 
 The source code will be released after the relevant paper accepted. If your want to make a human evaluation with GLHG. The results are available in here.
 
-If you use this dataset, we would appreciate you citing our work:
+If you use this baseline, we would appreciate you citing our work:
     
 ```
 @inproceedings{DBLP:conf/ijcai/00080XXSL22,
