@@ -2,7 +2,7 @@
 
 This is the repository of our IJCAI 2022 paper Control Globally, Understand Locally: A Global-to-Local Hierarchical Graph Network for Emotional Support Conversation.
 
-The source code will be released after the relevant paper accepted. If your want to make a human evaluation with GLHG. The results are available in here. And automatic evaluation can be use in the following.
+The source code will be released after the relevant paper accepted. If your want to make a **human evaluation** with GLHG. **The results are available in generation-glhg.json**. And **automatic evaluation** can be use in the following.
 
 ![image](https://user-images.githubusercontent.com/30322673/233757464-28a32f63-fb5b-4bd9-81c6-ea4d690ff18a.png)
 
