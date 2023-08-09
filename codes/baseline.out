@@ -1,0 +1,949 @@
+nohup: ignoring input
+11/18/2021 17:17:07 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of BlenderbotSmallForConditionalGeneration were not initialized from the model checkpoint at /data/pretrained_models/blender_small and are newly initialized: ['model.decoder.wre.weight', 'model.decoder.wte.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+11/18/2021 17:17:19 - INFO - __main__ -   Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=512, cache_dir='/data//fourth_next/phy_diag/data/cached', data_path='./dataset', device=device(type='cuda'), do_eval=True, do_train=True, eval_all_checkpoints=False, eval_file_name='devWithStrategy_short.tsv', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', generate_and_eval=False, generation=False, gradient_accumulation_steps=2, learning_rate=1e-05, local_rank=-1, logging_steps=30, max_grad_norm=1.0, max_steps=-1, mode='train', model_name_or_path='/data/pretrained_models/blender_small', model_type='baseline', n_gpu=1, no_cuda=False, num_train_epochs=5, output_dir='/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42', overwrite_cache=True, overwrite_output_dir=True, per_gpu_eval_batch_size=8, per_gpu_train_batch_size=16, role=False, save_steps=120, save_total_limit=False, seed=42, should_continue=False, strategy=True, train_file_name='trainWithStrategy_short.tsv', turn=False, warmup_steps=120, weight_decay=0.0)
+11/18/2021 17:17:19 - INFO - __main__ -   Creating features from dataset file at /data//fourth_next/phy_diag/data/cached
+11/18/2021 17:17:25 - INFO - __main__ -   Saving features into cached file /data//fourth_next/phy_diag/data/cached/baseline_cached_lm_512train
+11/18/2021 17:17:25 - INFO - __main__ -   Creating features from dataset file at /data//fourth_next/phy_diag/data/cached
+11/18/2021 17:17:39 - INFO - __main__ -   Saving features into cached file /data//fourth_next/phy_diag/data/cached/baseline_cached_lm_512train
+11/18/2021 17:17:39 - INFO - __main__ -   ***** Running training *****
+11/18/2021 17:17:39 - INFO - __main__ -     Num examples = 8562
+11/18/2021 17:17:39 - INFO - __main__ -     Num Epochs = 5
+11/18/2021 17:17:39 - INFO - __main__ -     Instantaneous batch size per GPU = 16
+11/18/2021 17:17:39 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+11/18/2021 17:17:39 - INFO - __main__ -     Gradient Accumulation steps = 2
+11/18/2021 17:17:39 - INFO - __main__ -     Total optimization steps = 1335
+11/18/2021 17:17:51 - INFO - __main__ -   ***** Running evaluation checkpoint-30 *****
+11/18/2021 17:17:51 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:17:51 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:18:03 - INFO - __main__ -   ***** Eval results checkpoint-30 *****
+11/18/2021 17:18:03 - INFO - __main__ -     perplexity = tensor(36.1031, dtype=torch.float64)
+/home/.pw/.conda/envs/hug/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:247: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+11/18/2021 17:18:03 - INFO - __main__ -   lr: 0.000003, step: 30, loss: 4.011049, ppl: -2.553263 
+11/18/2021 17:18:14 - INFO - __main__ -   ***** Running evaluation checkpoint-60 *****
+11/18/2021 17:18:14 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:18:14 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:18:27 - INFO - __main__ -   ***** Eval results checkpoint-60 *****
+11/18/2021 17:18:27 - INFO - __main__ -     perplexity = tensor(27.3556, dtype=torch.float64)
+11/18/2021 17:18:27 - INFO - __main__ -   lr: 0.000005, step: 60, loss: 3.577389, ppl: -2.245237 
+11/18/2021 17:18:38 - INFO - __main__ -   ***** Running evaluation checkpoint-90 *****
+11/18/2021 17:18:38 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:18:38 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:18:50 - INFO - __main__ -   ***** Eval results checkpoint-90 *****
+11/18/2021 17:18:50 - INFO - __main__ -     perplexity = tensor(23.3308, dtype=torch.float64)
+11/18/2021 17:18:50 - INFO - __main__ -   lr: 0.000008, step: 90, loss: 3.261963, ppl: -3.633288 
+11/18/2021 17:19:01 - INFO - __main__ -   ***** Running evaluation checkpoint-120 *****
+11/18/2021 17:19:01 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:19:01 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:19:12 - INFO - __main__ -   ***** Eval results checkpoint-120 *****
+11/18/2021 17:19:12 - INFO - __main__ -     perplexity = tensor(21.4586, dtype=torch.float64)
+11/18/2021 17:19:12 - INFO - __main__ -   lr: 0.000010, step: 120, loss: 3.119222, ppl: -3.581550 
+11/18/2021 17:19:17 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-120
+/home/.pw/.conda/envs/hug/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:216: UserWarning: Please also save or load the state of the optimizer when saving or loading the scheduler.
+  warnings.warn(SAVE_STATE_WARNING, UserWarning)
+11/18/2021 17:19:22 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-120
+11/18/2021 17:19:32 - INFO - __main__ -   ***** Running evaluation checkpoint-150 *****
+11/18/2021 17:19:32 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:19:32 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:19:44 - INFO - __main__ -   ***** Eval results checkpoint-150 *****
+11/18/2021 17:19:44 - INFO - __main__ -     perplexity = tensor(20.2642, dtype=torch.float64)
+11/18/2021 17:19:44 - INFO - __main__ -   lr: 0.000010, step: 150, loss: 3.039351, ppl: -3.826034 
+11/18/2021 17:19:55 - INFO - __main__ -   ***** Running evaluation checkpoint-180 *****
+11/18/2021 17:19:55 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:19:55 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:20:06 - INFO - __main__ -   ***** Eval results checkpoint-180 *****
+11/18/2021 17:20:06 - INFO - __main__ -     perplexity = tensor(19.7800, dtype=torch.float64)
+11/18/2021 17:20:06 - INFO - __main__ -   lr: 0.000010, step: 180, loss: 3.037676, ppl: -3.747701 
+11/18/2021 17:20:17 - INFO - __main__ -   ***** Running evaluation checkpoint-210 *****
+11/18/2021 17:20:17 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:20:17 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:20:28 - INFO - __main__ -   ***** Eval results checkpoint-210 *****
+11/18/2021 17:20:28 - INFO - __main__ -     perplexity = tensor(19.3293, dtype=torch.float64)
+11/18/2021 17:20:28 - INFO - __main__ -   lr: 0.000009, step: 210, loss: 2.928773, ppl: -3.366951 
+11/18/2021 17:20:38 - INFO - __main__ -   ***** Running evaluation checkpoint-240 *****
+11/18/2021 17:20:38 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:20:38 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:20:51 - INFO - __main__ -   ***** Eval results checkpoint-240 *****
+11/18/2021 17:20:51 - INFO - __main__ -     perplexity = tensor(18.9865, dtype=torch.float64)
+11/18/2021 17:20:51 - INFO - __main__ -   lr: 0.000009, step: 240, loss: 2.895504, ppl: -2.857192 
+11/18/2021 17:20:56 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-240
+11/18/2021 17:21:00 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-240
+11/18/2021 17:21:11 - INFO - __main__ -   ***** Running evaluation checkpoint-270 *****
+11/18/2021 17:21:11 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:21:11 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:21:22 - INFO - __main__ -   ***** Eval results checkpoint-270 *****
+11/18/2021 17:21:22 - INFO - __main__ -     perplexity = tensor(18.8026, dtype=torch.float64)
+11/18/2021 17:21:22 - INFO - __main__ -   lr: 0.000009, step: 270, loss: 2.916725, ppl: -2.643917 
+11/18/2021 17:21:33 - INFO - __main__ -   ***** Running evaluation checkpoint-300 *****
+11/18/2021 17:21:33 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:21:33 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:21:44 - INFO - __main__ -   ***** Eval results checkpoint-300 *****
+11/18/2021 17:21:44 - INFO - __main__ -     perplexity = tensor(18.5210, dtype=torch.float64)
+11/18/2021 17:21:44 - INFO - __main__ -   lr: 0.000009, step: 300, loss: 2.880965, ppl: -2.710180 
+11/18/2021 17:21:54 - INFO - __main__ -   ***** Running evaluation checkpoint-330 *****
+11/18/2021 17:21:54 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:21:54 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:22:05 - INFO - __main__ -   ***** Eval results checkpoint-330 *****
+11/18/2021 17:22:05 - INFO - __main__ -     perplexity = tensor(18.4309, dtype=torch.float64)
+11/18/2021 17:22:05 - INFO - __main__ -   lr: 0.000008, step: 330, loss: 2.781381, ppl: -2.436355 
+11/18/2021 17:22:16 - INFO - __main__ -   ***** Running evaluation checkpoint-360 *****
+11/18/2021 17:22:16 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:22:16 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:22:26 - INFO - __main__ -   ***** Eval results checkpoint-360 *****
+11/18/2021 17:22:26 - INFO - __main__ -     perplexity = tensor(18.2668, dtype=torch.float64)
+11/18/2021 17:22:26 - INFO - __main__ -   lr: 0.000008, step: 360, loss: 2.799929, ppl: -2.464919 
+11/18/2021 17:22:31 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-360
+11/18/2021 17:22:35 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-360
+11/18/2021 17:22:46 - INFO - __main__ -   ***** Running evaluation checkpoint-390 *****
+11/18/2021 17:22:46 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:22:46 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:22:58 - INFO - __main__ -   ***** Eval results checkpoint-390 *****
+11/18/2021 17:22:58 - INFO - __main__ -     perplexity = tensor(18.2804, dtype=torch.float64)
+11/18/2021 17:22:58 - INFO - __main__ -   lr: 0.000008, step: 390, loss: 2.844333, ppl: -2.546082 
+11/18/2021 17:23:09 - INFO - __main__ -   ***** Running evaluation checkpoint-420 *****
+11/18/2021 17:23:09 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:23:09 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:23:20 - INFO - __main__ -   ***** Eval results checkpoint-420 *****
+11/18/2021 17:23:20 - INFO - __main__ -     perplexity = tensor(18.0128, dtype=torch.float64)
+11/18/2021 17:23:20 - INFO - __main__ -   lr: 0.000008, step: 420, loss: 2.764649, ppl: -2.546502 
+11/18/2021 17:23:30 - INFO - __main__ -   ***** Running evaluation checkpoint-450 *****
+11/18/2021 17:23:30 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:23:30 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:23:41 - INFO - __main__ -   ***** Eval results checkpoint-450 *****
+11/18/2021 17:23:41 - INFO - __main__ -     perplexity = tensor(17.9823, dtype=torch.float64)
+11/18/2021 17:23:41 - INFO - __main__ -   lr: 0.000007, step: 450, loss: 2.763541, ppl: -2.986967 
+11/18/2021 17:23:53 - INFO - __main__ -   ***** Running evaluation checkpoint-480 *****
+11/18/2021 17:23:53 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:23:53 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:24:05 - INFO - __main__ -   ***** Eval results checkpoint-480 *****
+11/18/2021 17:24:05 - INFO - __main__ -     perplexity = tensor(17.9799, dtype=torch.float64)
+11/18/2021 17:24:05 - INFO - __main__ -   lr: 0.000007, step: 480, loss: 2.752065, ppl: -2.785914 
+11/18/2021 17:24:11 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-480
+11/18/2021 17:24:15 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-480
+11/18/2021 17:24:27 - INFO - __main__ -   ***** Running evaluation checkpoint-510 *****
+11/18/2021 17:24:27 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:24:27 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:24:39 - INFO - __main__ -   ***** Eval results checkpoint-510 *****
+11/18/2021 17:24:39 - INFO - __main__ -     perplexity = tensor(17.6661, dtype=torch.float64)
+11/18/2021 17:24:39 - INFO - __main__ -   lr: 0.000007, step: 510, loss: 2.767274, ppl: -2.347779 
+11/18/2021 17:24:50 - INFO - __main__ -   ***** Running evaluation checkpoint-540 *****
+11/18/2021 17:24:50 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:24:50 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:25:00 - INFO - __main__ -   ***** Eval results checkpoint-540 *****
+11/18/2021 17:25:00 - INFO - __main__ -     perplexity = tensor(17.8174, dtype=torch.float64)
+11/18/2021 17:25:00 - INFO - __main__ -   lr: 0.000007, step: 540, loss: 2.773282, ppl: -3.652809 
+11/18/2021 17:25:12 - INFO - __main__ -   ***** Running evaluation checkpoint-570 *****
+11/18/2021 17:25:12 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:25:12 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:25:22 - INFO - __main__ -   ***** Eval results checkpoint-570 *****
+11/18/2021 17:25:22 - INFO - __main__ -     perplexity = tensor(17.8213, dtype=torch.float64)
+11/18/2021 17:25:22 - INFO - __main__ -   lr: 0.000006, step: 570, loss: 2.651298, ppl: -1.973387 
+11/18/2021 17:25:33 - INFO - __main__ -   ***** Running evaluation checkpoint-600 *****
+11/18/2021 17:25:33 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:25:33 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:25:45 - INFO - __main__ -   ***** Eval results checkpoint-600 *****
+11/18/2021 17:25:45 - INFO - __main__ -     perplexity = tensor(17.7798, dtype=torch.float64)
+11/18/2021 17:25:45 - INFO - __main__ -   lr: 0.000006, step: 600, loss: 2.674522, ppl: -2.179676 
+11/18/2021 17:25:50 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-600
+11/18/2021 17:25:54 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-600
+11/18/2021 17:26:05 - INFO - __main__ -   ***** Running evaluation checkpoint-630 *****
+11/18/2021 17:26:05 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:26:05 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:26:17 - INFO - __main__ -   ***** Eval results checkpoint-630 *****
+11/18/2021 17:26:17 - INFO - __main__ -     perplexity = tensor(17.6338, dtype=torch.float64)
+11/18/2021 17:26:17 - INFO - __main__ -   lr: 0.000006, step: 630, loss: 2.733376, ppl: -2.661834 
+11/18/2021 17:26:28 - INFO - __main__ -   ***** Running evaluation checkpoint-660 *****
+11/18/2021 17:26:28 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:26:28 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:26:39 - INFO - __main__ -   ***** Eval results checkpoint-660 *****
+11/18/2021 17:26:39 - INFO - __main__ -     perplexity = tensor(17.6961, dtype=torch.float64)
+11/18/2021 17:26:39 - INFO - __main__ -   lr: 0.000006, step: 660, loss: 2.695528, ppl: -2.797652 
+11/18/2021 17:26:50 - INFO - __main__ -   ***** Running evaluation checkpoint-690 *****
+11/18/2021 17:26:50 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:26:50 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:27:00 - INFO - __main__ -   ***** Eval results checkpoint-690 *****
+11/18/2021 17:27:00 - INFO - __main__ -     perplexity = tensor(17.6267, dtype=torch.float64)
+11/18/2021 17:27:00 - INFO - __main__ -   lr: 0.000005, step: 690, loss: 2.652345, ppl: -2.808430 
+11/18/2021 17:27:11 - INFO - __main__ -   ***** Running evaluation checkpoint-720 *****
+11/18/2021 17:27:11 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:27:11 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:27:22 - INFO - __main__ -   ***** Eval results checkpoint-720 *****
+11/18/2021 17:27:22 - INFO - __main__ -     perplexity = tensor(17.5140, dtype=torch.float64)
+11/18/2021 17:27:22 - INFO - __main__ -   lr: 0.000005, step: 720, loss: 2.671569, ppl: -2.727947 
+11/18/2021 17:27:27 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-720
+11/18/2021 17:27:31 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-720
+11/18/2021 17:27:43 - INFO - __main__ -   ***** Running evaluation checkpoint-750 *****
+11/18/2021 17:27:43 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:27:43 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:27:53 - INFO - __main__ -   ***** Eval results checkpoint-750 *****
+11/18/2021 17:27:53 - INFO - __main__ -     perplexity = tensor(17.5398, dtype=torch.float64)
+11/18/2021 17:27:53 - INFO - __main__ -   lr: 0.000005, step: 750, loss: 2.684000, ppl: -2.043954 
+11/18/2021 17:28:04 - INFO - __main__ -   ***** Running evaluation checkpoint-780 *****
+11/18/2021 17:28:04 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:28:04 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:28:15 - INFO - __main__ -   ***** Eval results checkpoint-780 *****
+11/18/2021 17:28:15 - INFO - __main__ -     perplexity = tensor(17.4576, dtype=torch.float64)
+11/18/2021 17:28:15 - INFO - __main__ -   lr: 0.000005, step: 780, loss: 2.707797, ppl: -2.621037 
+11/18/2021 17:28:26 - INFO - __main__ -   ***** Running evaluation checkpoint-810 *****
+11/18/2021 17:28:26 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:28:26 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:28:36 - INFO - __main__ -   ***** Eval results checkpoint-810 *****
+11/18/2021 17:28:36 - INFO - __main__ -     perplexity = tensor(17.5060, dtype=torch.float64)
+11/18/2021 17:28:36 - INFO - __main__ -   lr: 0.000004, step: 810, loss: 2.692842, ppl: -2.701580 
+11/18/2021 17:28:47 - INFO - __main__ -   ***** Running evaluation checkpoint-840 *****
+11/18/2021 17:28:47 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:28:47 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:28:58 - INFO - __main__ -   ***** Eval results checkpoint-840 *****
+11/18/2021 17:28:58 - INFO - __main__ -     perplexity = tensor(17.4694, dtype=torch.float64)
+11/18/2021 17:28:58 - INFO - __main__ -   lr: 0.000004, step: 840, loss: 2.589485, ppl: -2.530787 
+11/18/2021 17:29:03 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-840
+11/18/2021 17:29:07 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-840
+11/18/2021 17:29:19 - INFO - __main__ -   ***** Running evaluation checkpoint-870 *****
+11/18/2021 17:29:19 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:29:19 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:29:29 - INFO - __main__ -   ***** Eval results checkpoint-870 *****
+11/18/2021 17:29:29 - INFO - __main__ -     perplexity = tensor(17.4409, dtype=torch.float64)
+11/18/2021 17:29:29 - INFO - __main__ -   lr: 0.000004, step: 870, loss: 2.651193, ppl: -1.926101 
+11/18/2021 17:29:40 - INFO - __main__ -   ***** Running evaluation checkpoint-900 *****
+11/18/2021 17:29:40 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:29:40 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:29:51 - INFO - __main__ -   ***** Eval results checkpoint-900 *****
+11/18/2021 17:29:51 - INFO - __main__ -     perplexity = tensor(17.4488, dtype=torch.float64)
+11/18/2021 17:29:51 - INFO - __main__ -   lr: 0.000004, step: 900, loss: 2.609598, ppl: -2.438643 
+11/18/2021 17:30:02 - INFO - __main__ -   ***** Running evaluation checkpoint-930 *****
+11/18/2021 17:30:02 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:30:02 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:30:13 - INFO - __main__ -   ***** Eval results checkpoint-930 *****
+11/18/2021 17:30:13 - INFO - __main__ -     perplexity = tensor(17.3990, dtype=torch.float64)
+11/18/2021 17:30:13 - INFO - __main__ -   lr: 0.000003, step: 930, loss: 2.577731, ppl: -2.521386 
+11/18/2021 17:30:23 - INFO - __main__ -   ***** Running evaluation checkpoint-960 *****
+11/18/2021 17:30:23 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:30:23 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:30:34 - INFO - __main__ -   ***** Eval results checkpoint-960 *****
+11/18/2021 17:30:34 - INFO - __main__ -     perplexity = tensor(17.3758, dtype=torch.float64)
+11/18/2021 17:30:34 - INFO - __main__ -   lr: 0.000003, step: 960, loss: 2.603858, ppl: -2.910799 
+11/18/2021 17:30:39 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-960
+11/18/2021 17:30:44 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-960
+11/18/2021 17:30:55 - INFO - __main__ -   ***** Running evaluation checkpoint-990 *****
+11/18/2021 17:30:55 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:30:55 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:31:05 - INFO - __main__ -   ***** Eval results checkpoint-990 *****
+11/18/2021 17:31:05 - INFO - __main__ -     perplexity = tensor(17.3687, dtype=torch.float64)
+11/18/2021 17:31:05 - INFO - __main__ -   lr: 0.000003, step: 990, loss: 2.633251, ppl: -2.178850 
+11/18/2021 17:31:16 - INFO - __main__ -   ***** Running evaluation checkpoint-1020 *****
+11/18/2021 17:31:16 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:31:16 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:31:26 - INFO - __main__ -   ***** Eval results checkpoint-1020 *****
+11/18/2021 17:31:26 - INFO - __main__ -     perplexity = tensor(17.3383, dtype=torch.float64)
+11/18/2021 17:31:26 - INFO - __main__ -   lr: 0.000003, step: 1020, loss: 2.586989, ppl: -2.864167 
+11/18/2021 17:31:37 - INFO - __main__ -   ***** Running evaluation checkpoint-1050 *****
+11/18/2021 17:31:37 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:31:37 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:31:48 - INFO - __main__ -   ***** Eval results checkpoint-1050 *****
+11/18/2021 17:31:48 - INFO - __main__ -     perplexity = tensor(17.3877, dtype=torch.float64)
+11/18/2021 17:31:48 - INFO - __main__ -   lr: 0.000002, step: 1050, loss: 2.662815, ppl: -2.703817 
+11/18/2021 17:31:58 - INFO - __main__ -   ***** Running evaluation checkpoint-1080 *****
+11/18/2021 17:31:58 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:31:58 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:32:10 - INFO - __main__ -   ***** Eval results checkpoint-1080 *****
+11/18/2021 17:32:10 - INFO - __main__ -     perplexity = tensor(17.3729, dtype=torch.float64)
+11/18/2021 17:32:10 - INFO - __main__ -   lr: 0.000002, step: 1080, loss: 2.625464, ppl: -3.067142 
+11/18/2021 17:32:15 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-1080
+11/18/2021 17:32:19 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-1080
+11/18/2021 17:32:31 - INFO - __main__ -   ***** Running evaluation checkpoint-1110 *****
+11/18/2021 17:32:31 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:32:31 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:32:43 - INFO - __main__ -   ***** Eval results checkpoint-1110 *****
+11/18/2021 17:32:43 - INFO - __main__ -     perplexity = tensor(17.3348, dtype=torch.float64)
+11/18/2021 17:32:43 - INFO - __main__ -   lr: 0.000002, step: 1110, loss: 2.610556, ppl: -2.505451 
+11/18/2021 17:32:54 - INFO - __main__ -   ***** Running evaluation checkpoint-1140 *****
+11/18/2021 17:32:54 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:32:54 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:33:05 - INFO - __main__ -   ***** Eval results checkpoint-1140 *****
+11/18/2021 17:33:05 - INFO - __main__ -     perplexity = tensor(17.3684, dtype=torch.float64)
+11/18/2021 17:33:05 - INFO - __main__ -   lr: 0.000002, step: 1140, loss: 2.608774, ppl: -2.567438 
+11/18/2021 17:33:16 - INFO - __main__ -   ***** Running evaluation checkpoint-1170 *****
+11/18/2021 17:33:16 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:33:16 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:33:27 - INFO - __main__ -   ***** Eval results checkpoint-1170 *****
+11/18/2021 17:33:27 - INFO - __main__ -     perplexity = tensor(17.4012, dtype=torch.float64)
+11/18/2021 17:33:27 - INFO - __main__ -   lr: 0.000001, step: 1170, loss: 2.590640, ppl: -2.697048 
+11/18/2021 17:33:38 - INFO - __main__ -   ***** Running evaluation checkpoint-1200 *****
+11/18/2021 17:33:38 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:33:38 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:33:48 - INFO - __main__ -   ***** Eval results checkpoint-1200 *****
+11/18/2021 17:33:48 - INFO - __main__ -     perplexity = tensor(17.3642, dtype=torch.float64)
+11/18/2021 17:33:48 - INFO - __main__ -   lr: 0.000001, step: 1200, loss: 2.561033, ppl: -3.227046 
+11/18/2021 17:33:53 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-1200
+11/18/2021 17:33:58 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-1200
+11/18/2021 17:34:08 - INFO - __main__ -   ***** Running evaluation checkpoint-1230 *****
+11/18/2021 17:34:08 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:34:08 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:34:19 - INFO - __main__ -   ***** Eval results checkpoint-1230 *****
+11/18/2021 17:34:19 - INFO - __main__ -     perplexity = tensor(17.3052, dtype=torch.float64)
+11/18/2021 17:34:19 - INFO - __main__ -   lr: 0.000001, step: 1230, loss: 2.568747, ppl: -2.762179 
+11/18/2021 17:34:30 - INFO - __main__ -   ***** Running evaluation checkpoint-1260 *****
+11/18/2021 17:34:30 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:34:30 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:34:41 - INFO - __main__ -   ***** Eval results checkpoint-1260 *****
+11/18/2021 17:34:41 - INFO - __main__ -     perplexity = tensor(17.3308, dtype=torch.float64)
+11/18/2021 17:34:41 - INFO - __main__ -   lr: 0.000001, step: 1260, loss: 2.605721, ppl: -2.663385 
+11/18/2021 17:34:52 - INFO - __main__ -   ***** Running evaluation checkpoint-1290 *****
+11/18/2021 17:34:52 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:34:52 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:35:03 - INFO - __main__ -   ***** Eval results checkpoint-1290 *****
+11/18/2021 17:35:03 - INFO - __main__ -     perplexity = tensor(17.3279, dtype=torch.float64)
+11/18/2021 17:35:03 - INFO - __main__ -   lr: 0.000000, step: 1290, loss: 2.575487, ppl: -2.848909 
+11/18/2021 17:35:13 - INFO - __main__ -   ***** Running evaluation checkpoint-1320 *****
+11/18/2021 17:35:13 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:35:13 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:35:26 - INFO - __main__ -   ***** Eval results checkpoint-1320 *****
+11/18/2021 17:35:26 - INFO - __main__ -     perplexity = tensor(17.3300, dtype=torch.float64)
+11/18/2021 17:35:26 - INFO - __main__ -   lr: 0.000000, step: 1320, loss: 2.556321, ppl: -2.783048 
+11/18/2021 17:35:31 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-1320
+11/18/2021 17:35:36 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42/checkpoint-1320
+11/18/2021 17:35:42 - INFO - __main__ -    global_step = 1335, average loss = 2.7775519179047716
+11/18/2021 17:35:42 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42
+11/18/2021 17:35:53 - INFO - __main__ -   Evaluate the following checkpoints: ['/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42']
+11/18/2021 17:36:00 - INFO - __main__ -   ***** Running evaluation  *****
+11/18/2021 17:36:00 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:36:00 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:36:12 - INFO - __main__ -   ***** Eval results  *****
+11/18/2021 17:36:12 - INFO - __main__ -     perplexity = tensor(17.3113, dtype=torch.float64)
+Namespace(adam_epsilon=1e-08, block_size=512, cache_dir='/data//fourth_next/phy_diag/data/cached', data_path='./dataset', do_eval=True, do_train=True, eval_all_checkpoints=False, eval_file_name='devWithStrategy_short.tsv', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', generate_and_eval=False, generation=False, gradient_accumulation_steps=2, learning_rate=1e-05, local_rank=-1, logging_steps=30, max_grad_norm=1.0, max_steps=-1, mode='train', model_name_or_path='/data/pretrained_models/blender_small', model_type='baseline', no_cuda=False, num_train_epochs=5, output_dir='/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr1_e5_seed42', overwrite_cache=True, overwrite_output_dir=True, per_gpu_eval_batch_size=8, per_gpu_train_batch_size=16, role=False, save_steps=120, save_total_limit=False, seed=42, should_continue=False, strategy=True, train_file_name='trainWithStrategy_short.tsv', turn=False, warmup_steps=120, weight_decay=0.0)
+87,580,160 total parameters.
+87,580,160 training parameters.
+11/18/2021 17:36:16 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of BlenderbotSmallForConditionalGeneration were not initialized from the model checkpoint at /data/pretrained_models/blender_small and are newly initialized: ['model.decoder.wre.weight', 'model.decoder.wte.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+11/18/2021 17:36:28 - INFO - __main__ -   Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=512, cache_dir='/data//fourth_next/phy_diag/data/cached', data_path='./dataset', device=device(type='cuda'), do_eval=True, do_train=True, eval_all_checkpoints=False, eval_file_name='devWithStrategy_short.tsv', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', generate_and_eval=False, generation=False, gradient_accumulation_steps=2, learning_rate=2e-05, local_rank=-1, logging_steps=30, max_grad_norm=1.0, max_steps=-1, mode='train', model_name_or_path='/data/pretrained_models/blender_small', model_type='baseline', n_gpu=1, no_cuda=False, num_train_epochs=5, output_dir='/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42', overwrite_cache=True, overwrite_output_dir=True, per_gpu_eval_batch_size=8, per_gpu_train_batch_size=16, role=False, save_steps=120, save_total_limit=False, seed=42, should_continue=False, strategy=True, train_file_name='trainWithStrategy_short.tsv', turn=False, warmup_steps=120, weight_decay=0.0)
+11/18/2021 17:36:28 - INFO - __main__ -   Creating features from dataset file at /data//fourth_next/phy_diag/data/cached
+11/18/2021 17:36:33 - INFO - __main__ -   Saving features into cached file /data//fourth_next/phy_diag/data/cached/baseline_cached_lm_512train
+11/18/2021 17:36:33 - INFO - __main__ -   Creating features from dataset file at /data//fourth_next/phy_diag/data/cached
+11/18/2021 17:36:48 - INFO - __main__ -   Saving features into cached file /data//fourth_next/phy_diag/data/cached/baseline_cached_lm_512train
+11/18/2021 17:36:48 - INFO - __main__ -   ***** Running training *****
+11/18/2021 17:36:48 - INFO - __main__ -     Num examples = 8562
+11/18/2021 17:36:48 - INFO - __main__ -     Num Epochs = 5
+11/18/2021 17:36:48 - INFO - __main__ -     Instantaneous batch size per GPU = 16
+11/18/2021 17:36:48 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+11/18/2021 17:36:48 - INFO - __main__ -     Gradient Accumulation steps = 2
+11/18/2021 17:36:48 - INFO - __main__ -     Total optimization steps = 1335
+11/18/2021 17:36:59 - INFO - __main__ -   ***** Running evaluation checkpoint-30 *****
+11/18/2021 17:36:59 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:36:59 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:37:10 - INFO - __main__ -   ***** Eval results checkpoint-30 *****
+11/18/2021 17:37:10 - INFO - __main__ -     perplexity = tensor(31.6248, dtype=torch.float64)
+/home/.pw/.conda/envs/hug/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:247: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+11/18/2021 17:37:10 - INFO - __main__ -   lr: 0.000005, step: 30, loss: 3.938380, ppl: -2.480707 
+11/18/2021 17:37:21 - INFO - __main__ -   ***** Running evaluation checkpoint-60 *****
+11/18/2021 17:37:21 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:37:21 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:37:32 - INFO - __main__ -   ***** Eval results checkpoint-60 *****
+11/18/2021 17:37:32 - INFO - __main__ -     perplexity = tensor(23.7238, dtype=torch.float64)
+11/18/2021 17:37:32 - INFO - __main__ -   lr: 0.000010, step: 60, loss: 3.367420, ppl: -2.710069 
+11/18/2021 17:37:43 - INFO - __main__ -   ***** Running evaluation checkpoint-90 *****
+11/18/2021 17:37:43 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:37:43 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:37:54 - INFO - __main__ -   ***** Eval results checkpoint-90 *****
+11/18/2021 17:37:54 - INFO - __main__ -     perplexity = tensor(21.1515, dtype=torch.float64)
+11/18/2021 17:37:54 - INFO - __main__ -   lr: 0.000015, step: 90, loss: 3.106330, ppl: -4.078596 
+11/18/2021 17:38:05 - INFO - __main__ -   ***** Running evaluation checkpoint-120 *****
+11/18/2021 17:38:05 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:38:05 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:38:17 - INFO - __main__ -   ***** Eval results checkpoint-120 *****
+11/18/2021 17:38:17 - INFO - __main__ -     perplexity = tensor(20.0164, dtype=torch.float64)
+11/18/2021 17:38:17 - INFO - __main__ -   lr: 0.000020, step: 120, loss: 3.019933, ppl: -3.505278 
+11/18/2021 17:38:22 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-120
+/home/.pw/.conda/envs/hug/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:216: UserWarning: Please also save or load the state of the optimizer when saving or loading the scheduler.
+  warnings.warn(SAVE_STATE_WARNING, UserWarning)
+11/18/2021 17:38:26 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-120
+11/18/2021 17:38:37 - INFO - __main__ -   ***** Running evaluation checkpoint-150 *****
+11/18/2021 17:38:37 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:38:37 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:38:47 - INFO - __main__ -   ***** Eval results checkpoint-150 *****
+11/18/2021 17:38:47 - INFO - __main__ -     perplexity = tensor(19.1624, dtype=torch.float64)
+11/18/2021 17:38:47 - INFO - __main__ -   lr: 0.000020, step: 150, loss: 2.963962, ppl: -3.344890 
+11/18/2021 17:38:58 - INFO - __main__ -   ***** Running evaluation checkpoint-180 *****
+11/18/2021 17:38:58 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:38:58 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:39:08 - INFO - __main__ -   ***** Eval results checkpoint-180 *****
+11/18/2021 17:39:08 - INFO - __main__ -     perplexity = tensor(18.7990, dtype=torch.float64)
+11/18/2021 17:39:08 - INFO - __main__ -   lr: 0.000019, step: 180, loss: 2.970105, ppl: -3.057349 
+11/18/2021 17:39:19 - INFO - __main__ -   ***** Running evaluation checkpoint-210 *****
+11/18/2021 17:39:19 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:39:19 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:39:30 - INFO - __main__ -   ***** Eval results checkpoint-210 *****
+11/18/2021 17:39:30 - INFO - __main__ -     perplexity = tensor(18.4085, dtype=torch.float64)
+11/18/2021 17:39:30 - INFO - __main__ -   lr: 0.000019, step: 210, loss: 2.868542, ppl: -3.033818 
+11/18/2021 17:39:41 - INFO - __main__ -   ***** Running evaluation checkpoint-240 *****
+11/18/2021 17:39:41 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:39:41 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:39:51 - INFO - __main__ -   ***** Eval results checkpoint-240 *****
+11/18/2021 17:39:51 - INFO - __main__ -     perplexity = tensor(18.2157, dtype=torch.float64)
+11/18/2021 17:39:51 - INFO - __main__ -   lr: 0.000018, step: 240, loss: 2.841064, ppl: -2.331924 
+11/18/2021 17:39:57 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-240
+11/18/2021 17:40:01 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-240
+11/18/2021 17:40:12 - INFO - __main__ -   ***** Running evaluation checkpoint-270 *****
+11/18/2021 17:40:12 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:40:12 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:40:22 - INFO - __main__ -   ***** Eval results checkpoint-270 *****
+11/18/2021 17:40:22 - INFO - __main__ -     perplexity = tensor(17.9325, dtype=torch.float64)
+11/18/2021 17:40:22 - INFO - __main__ -   lr: 0.000018, step: 270, loss: 2.856061, ppl: -2.263436 
+11/18/2021 17:40:33 - INFO - __main__ -   ***** Running evaluation checkpoint-300 *****
+11/18/2021 17:40:33 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:40:33 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:40:44 - INFO - __main__ -   ***** Eval results checkpoint-300 *****
+11/18/2021 17:40:44 - INFO - __main__ -     perplexity = tensor(17.8891, dtype=torch.float64)
+11/18/2021 17:40:44 - INFO - __main__ -   lr: 0.000017, step: 300, loss: 2.763252, ppl: -2.799378 
+11/18/2021 17:40:54 - INFO - __main__ -   ***** Running evaluation checkpoint-330 *****
+11/18/2021 17:40:54 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:40:54 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:41:05 - INFO - __main__ -   ***** Eval results checkpoint-330 *****
+11/18/2021 17:41:05 - INFO - __main__ -     perplexity = tensor(17.7554, dtype=torch.float64)
+11/18/2021 17:41:05 - INFO - __main__ -   lr: 0.000017, step: 330, loss: 2.672200, ppl: -2.532790 
+11/18/2021 17:41:16 - INFO - __main__ -   ***** Running evaluation checkpoint-360 *****
+11/18/2021 17:41:16 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:41:16 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:41:28 - INFO - __main__ -   ***** Eval results checkpoint-360 *****
+11/18/2021 17:41:28 - INFO - __main__ -     perplexity = tensor(17.6591, dtype=torch.float64)
+11/18/2021 17:41:28 - INFO - __main__ -   lr: 0.000016, step: 360, loss: 2.695395, ppl: -2.753027 
+11/18/2021 17:41:33 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-360
+11/18/2021 17:41:37 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-360
+11/18/2021 17:41:48 - INFO - __main__ -   ***** Running evaluation checkpoint-390 *****
+11/18/2021 17:41:48 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:41:48 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:42:00 - INFO - __main__ -   ***** Eval results checkpoint-390 *****
+11/18/2021 17:42:00 - INFO - __main__ -     perplexity = tensor(17.8511, dtype=torch.float64)
+11/18/2021 17:42:00 - INFO - __main__ -   lr: 0.000016, step: 390, loss: 2.740461, ppl: -2.996422 
+11/18/2021 17:42:10 - INFO - __main__ -   ***** Running evaluation checkpoint-420 *****
+11/18/2021 17:42:10 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:42:10 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:42:21 - INFO - __main__ -   ***** Eval results checkpoint-420 *****
+11/18/2021 17:42:21 - INFO - __main__ -     perplexity = tensor(17.5203, dtype=torch.float64)
+11/18/2021 17:42:21 - INFO - __main__ -   lr: 0.000015, step: 420, loss: 2.663583, ppl: -3.092232 
+11/18/2021 17:42:32 - INFO - __main__ -   ***** Running evaluation checkpoint-450 *****
+11/18/2021 17:42:32 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:42:32 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:42:42 - INFO - __main__ -   ***** Eval results checkpoint-450 *****
+11/18/2021 17:42:42 - INFO - __main__ -     perplexity = tensor(17.4932, dtype=torch.float64)
+11/18/2021 17:42:42 - INFO - __main__ -   lr: 0.000015, step: 450, loss: 2.669328, ppl: -3.571730 
+11/18/2021 17:42:53 - INFO - __main__ -   ***** Running evaluation checkpoint-480 *****
+11/18/2021 17:42:53 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:42:53 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:43:04 - INFO - __main__ -   ***** Eval results checkpoint-480 *****
+11/18/2021 17:43:04 - INFO - __main__ -     perplexity = tensor(17.5325, dtype=torch.float64)
+11/18/2021 17:43:04 - INFO - __main__ -   lr: 0.000014, step: 480, loss: 2.657493, ppl: -3.082165 
+11/18/2021 17:43:09 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-480
+11/18/2021 17:43:14 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-480
+11/18/2021 17:43:25 - INFO - __main__ -   ***** Running evaluation checkpoint-510 *****
+11/18/2021 17:43:25 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:43:25 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:43:35 - INFO - __main__ -   ***** Eval results checkpoint-510 *****
+11/18/2021 17:43:35 - INFO - __main__ -     perplexity = tensor(17.1939, dtype=torch.float64)
+11/18/2021 17:43:35 - INFO - __main__ -   lr: 0.000014, step: 510, loss: 2.671857, ppl: -2.858590 
+11/18/2021 17:43:45 - INFO - __main__ -   ***** Running evaluation checkpoint-540 *****
+11/18/2021 17:43:45 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:43:45 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:43:56 - INFO - __main__ -   ***** Eval results checkpoint-540 *****
+11/18/2021 17:43:56 - INFO - __main__ -     perplexity = tensor(17.3524, dtype=torch.float64)
+11/18/2021 17:43:56 - INFO - __main__ -   lr: 0.000013, step: 540, loss: 2.668667, ppl: -4.149605 
+11/18/2021 17:44:06 - INFO - __main__ -   ***** Running evaluation checkpoint-570 *****
+11/18/2021 17:44:06 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:44:06 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:44:17 - INFO - __main__ -   ***** Eval results checkpoint-570 *****
+11/18/2021 17:44:17 - INFO - __main__ -     perplexity = tensor(17.5028, dtype=torch.float64)
+11/18/2021 17:44:17 - INFO - __main__ -   lr: 0.000013, step: 570, loss: 2.498748, ppl: -2.236942 
+11/18/2021 17:44:28 - INFO - __main__ -   ***** Running evaluation checkpoint-600 *****
+11/18/2021 17:44:28 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:44:28 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:44:39 - INFO - __main__ -   ***** Eval results checkpoint-600 *****
+11/18/2021 17:44:39 - INFO - __main__ -     perplexity = tensor(17.5413, dtype=torch.float64)
+11/18/2021 17:44:39 - INFO - __main__ -   lr: 0.000012, step: 600, loss: 2.524973, ppl: -2.527687 
+11/18/2021 17:44:44 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-600
+11/18/2021 17:44:48 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-600
+11/18/2021 17:44:59 - INFO - __main__ -   ***** Running evaluation checkpoint-630 *****
+11/18/2021 17:44:59 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:44:59 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:45:12 - INFO - __main__ -   ***** Eval results checkpoint-630 *****
+11/18/2021 17:45:12 - INFO - __main__ -     perplexity = tensor(17.3779, dtype=torch.float64)
+11/18/2021 17:45:12 - INFO - __main__ -   lr: 0.000012, step: 630, loss: 2.581345, ppl: -3.439290 
+11/18/2021 17:45:23 - INFO - __main__ -   ***** Running evaluation checkpoint-660 *****
+11/18/2021 17:45:23 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:45:23 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:45:34 - INFO - __main__ -   ***** Eval results checkpoint-660 *****
+11/18/2021 17:45:34 - INFO - __main__ -     perplexity = tensor(17.3616, dtype=torch.float64)
+11/18/2021 17:45:34 - INFO - __main__ -   lr: 0.000011, step: 660, loss: 2.550196, ppl: -3.451737 
+11/18/2021 17:45:44 - INFO - __main__ -   ***** Running evaluation checkpoint-690 *****
+11/18/2021 17:45:44 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:45:44 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:45:55 - INFO - __main__ -   ***** Eval results checkpoint-690 *****
+11/18/2021 17:45:55 - INFO - __main__ -     perplexity = tensor(17.3747, dtype=torch.float64)
+11/18/2021 17:45:55 - INFO - __main__ -   lr: 0.000011, step: 690, loss: 2.510406, ppl: -3.423712 
+11/18/2021 17:46:05 - INFO - __main__ -   ***** Running evaluation checkpoint-720 *****
+11/18/2021 17:46:05 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:46:05 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:46:15 - INFO - __main__ -   ***** Eval results checkpoint-720 *****
+11/18/2021 17:46:15 - INFO - __main__ -     perplexity = tensor(17.1572, dtype=torch.float64)
+11/18/2021 17:46:15 - INFO - __main__ -   lr: 0.000010, step: 720, loss: 2.532209, ppl: -3.591440 
+11/18/2021 17:46:20 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-720
+11/18/2021 17:46:24 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-720
+11/18/2021 17:46:36 - INFO - __main__ -   ***** Running evaluation checkpoint-750 *****
+11/18/2021 17:46:36 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:46:36 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:46:46 - INFO - __main__ -   ***** Eval results checkpoint-750 *****
+11/18/2021 17:46:46 - INFO - __main__ -     perplexity = tensor(17.2237, dtype=torch.float64)
+11/18/2021 17:46:46 - INFO - __main__ -   lr: 0.000010, step: 750, loss: 2.544124, ppl: -2.869284 
+11/18/2021 17:46:57 - INFO - __main__ -   ***** Running evaluation checkpoint-780 *****
+11/18/2021 17:46:57 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:46:57 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:47:09 - INFO - __main__ -   ***** Eval results checkpoint-780 *****
+11/18/2021 17:47:09 - INFO - __main__ -     perplexity = tensor(17.1758, dtype=torch.float64)
+11/18/2021 17:47:09 - INFO - __main__ -   lr: 0.000009, step: 780, loss: 2.568038, ppl: -3.462062 
+11/18/2021 17:47:20 - INFO - __main__ -   ***** Running evaluation checkpoint-810 *****
+11/18/2021 17:47:20 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:47:20 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:47:30 - INFO - __main__ -   ***** Eval results checkpoint-810 *****
+11/18/2021 17:47:30 - INFO - __main__ -     perplexity = tensor(17.2418, dtype=torch.float64)
+11/18/2021 17:47:30 - INFO - __main__ -   lr: 0.000009, step: 810, loss: 2.538762, ppl: -3.549940 
+11/18/2021 17:47:42 - INFO - __main__ -   ***** Running evaluation checkpoint-840 *****
+11/18/2021 17:47:42 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:47:42 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:47:53 - INFO - __main__ -   ***** Eval results checkpoint-840 *****
+11/18/2021 17:47:53 - INFO - __main__ -     perplexity = tensor(17.3337, dtype=torch.float64)
+11/18/2021 17:47:53 - INFO - __main__ -   lr: 0.000008, step: 840, loss: 2.399549, ppl: -3.166546 
+11/18/2021 17:47:58 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-840
+11/18/2021 17:48:03 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-840
+11/18/2021 17:48:14 - INFO - __main__ -   ***** Running evaluation checkpoint-870 *****
+11/18/2021 17:48:14 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:48:14 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:48:24 - INFO - __main__ -   ***** Eval results checkpoint-870 *****
+11/18/2021 17:48:24 - INFO - __main__ -     perplexity = tensor(17.1787, dtype=torch.float64)
+11/18/2021 17:48:24 - INFO - __main__ -   lr: 0.000008, step: 870, loss: 2.468515, ppl: -2.608797 
+11/18/2021 17:48:36 - INFO - __main__ -   ***** Running evaluation checkpoint-900 *****
+11/18/2021 17:48:36 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:48:36 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:48:47 - INFO - __main__ -   ***** Eval results checkpoint-900 *****
+11/18/2021 17:48:47 - INFO - __main__ -     perplexity = tensor(17.2349, dtype=torch.float64)
+11/18/2021 17:48:47 - INFO - __main__ -   lr: 0.000007, step: 900, loss: 2.426569, ppl: -3.241158 
+11/18/2021 17:48:58 - INFO - __main__ -   ***** Running evaluation checkpoint-930 *****
+11/18/2021 17:48:58 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:48:58 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:49:09 - INFO - __main__ -   ***** Eval results checkpoint-930 *****
+11/18/2021 17:49:09 - INFO - __main__ -     perplexity = tensor(17.2206, dtype=torch.float64)
+11/18/2021 17:49:09 - INFO - __main__ -   lr: 0.000007, step: 930, loss: 2.405794, ppl: -3.295181 
+11/18/2021 17:49:19 - INFO - __main__ -   ***** Running evaluation checkpoint-960 *****
+11/18/2021 17:49:19 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:49:19 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:49:30 - INFO - __main__ -   ***** Eval results checkpoint-960 *****
+11/18/2021 17:49:30 - INFO - __main__ -     perplexity = tensor(17.1832, dtype=torch.float64)
+11/18/2021 17:49:30 - INFO - __main__ -   lr: 0.000006, step: 960, loss: 2.426337, ppl: -3.796427 
+11/18/2021 17:49:35 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-960
+11/18/2021 17:49:39 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-960
+11/18/2021 17:49:50 - INFO - __main__ -   ***** Running evaluation checkpoint-990 *****
+11/18/2021 17:49:50 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:49:50 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:50:01 - INFO - __main__ -   ***** Eval results checkpoint-990 *****
+11/18/2021 17:50:01 - INFO - __main__ -     perplexity = tensor(17.2331, dtype=torch.float64)
+11/18/2021 17:50:01 - INFO - __main__ -   lr: 0.000006, step: 990, loss: 2.457325, ppl: -3.004456 
+11/18/2021 17:50:12 - INFO - __main__ -   ***** Running evaluation checkpoint-1020 *****
+11/18/2021 17:50:12 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:50:12 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:50:22 - INFO - __main__ -   ***** Eval results checkpoint-1020 *****
+11/18/2021 17:50:22 - INFO - __main__ -     perplexity = tensor(17.2666, dtype=torch.float64)
+11/18/2021 17:50:22 - INFO - __main__ -   lr: 0.000005, step: 1020, loss: 2.413632, ppl: -3.626323 
+11/18/2021 17:50:33 - INFO - __main__ -   ***** Running evaluation checkpoint-1050 *****
+11/18/2021 17:50:33 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:50:33 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:50:43 - INFO - __main__ -   ***** Eval results checkpoint-1050 *****
+11/18/2021 17:50:43 - INFO - __main__ -     perplexity = tensor(17.2914, dtype=torch.float64)
+11/18/2021 17:50:43 - INFO - __main__ -   lr: 0.000005, step: 1050, loss: 2.476355, ppl: -3.438073 
+11/18/2021 17:50:54 - INFO - __main__ -   ***** Running evaluation checkpoint-1080 *****
+11/18/2021 17:50:54 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:50:54 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:51:05 - INFO - __main__ -   ***** Eval results checkpoint-1080 *****
+11/18/2021 17:51:05 - INFO - __main__ -     perplexity = tensor(17.2727, dtype=torch.float64)
+11/18/2021 17:51:05 - INFO - __main__ -   lr: 0.000004, step: 1080, loss: 2.436746, ppl: -3.781606 
+11/18/2021 17:51:10 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-1080
+11/18/2021 17:51:14 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-1080
+11/18/2021 17:51:25 - INFO - __main__ -   ***** Running evaluation checkpoint-1110 *****
+11/18/2021 17:51:25 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:51:25 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:51:36 - INFO - __main__ -   ***** Eval results checkpoint-1110 *****
+11/18/2021 17:51:36 - INFO - __main__ -     perplexity = tensor(17.2971, dtype=torch.float64)
+11/18/2021 17:51:36 - INFO - __main__ -   lr: 0.000004, step: 1110, loss: 2.396399, ppl: -3.242155 
+11/18/2021 17:51:47 - INFO - __main__ -   ***** Running evaluation checkpoint-1140 *****
+11/18/2021 17:51:47 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:51:47 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:51:58 - INFO - __main__ -   ***** Eval results checkpoint-1140 *****
+11/18/2021 17:51:58 - INFO - __main__ -     perplexity = tensor(17.3484, dtype=torch.float64)
+11/18/2021 17:51:58 - INFO - __main__ -   lr: 0.000003, step: 1140, loss: 2.406353, ppl: -3.324191 
+11/18/2021 17:52:09 - INFO - __main__ -   ***** Running evaluation checkpoint-1170 *****
+11/18/2021 17:52:09 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:52:09 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:52:19 - INFO - __main__ -   ***** Eval results checkpoint-1170 *****
+11/18/2021 17:52:19 - INFO - __main__ -     perplexity = tensor(17.3356, dtype=torch.float64)
+11/18/2021 17:52:19 - INFO - __main__ -   lr: 0.000003, step: 1170, loss: 2.386310, ppl: -3.419960 
+11/18/2021 17:52:30 - INFO - __main__ -   ***** Running evaluation checkpoint-1200 *****
+11/18/2021 17:52:30 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:52:30 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:52:42 - INFO - __main__ -   ***** Eval results checkpoint-1200 *****
+11/18/2021 17:52:42 - INFO - __main__ -     perplexity = tensor(17.3519, dtype=torch.float64)
+11/18/2021 17:52:42 - INFO - __main__ -   lr: 0.000002, step: 1200, loss: 2.356492, ppl: -3.945328 
+11/18/2021 17:52:47 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-1200
+11/18/2021 17:52:52 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-1200
+11/18/2021 17:53:02 - INFO - __main__ -   ***** Running evaluation checkpoint-1230 *****
+11/18/2021 17:53:02 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:53:02 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:53:13 - INFO - __main__ -   ***** Eval results checkpoint-1230 *****
+11/18/2021 17:53:13 - INFO - __main__ -     perplexity = tensor(17.2868, dtype=torch.float64)
+11/18/2021 17:53:13 - INFO - __main__ -   lr: 0.000002, step: 1230, loss: 2.366160, ppl: -3.480525 
+11/18/2021 17:53:24 - INFO - __main__ -   ***** Running evaluation checkpoint-1260 *****
+11/18/2021 17:53:24 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:53:24 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:53:34 - INFO - __main__ -   ***** Eval results checkpoint-1260 *****
+11/18/2021 17:53:34 - INFO - __main__ -     perplexity = tensor(17.3001, dtype=torch.float64)
+11/18/2021 17:53:34 - INFO - __main__ -   lr: 0.000001, step: 1260, loss: 2.402650, ppl: -3.398237 
+11/18/2021 17:53:45 - INFO - __main__ -   ***** Running evaluation checkpoint-1290 *****
+11/18/2021 17:53:45 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:53:45 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:53:56 - INFO - __main__ -   ***** Eval results checkpoint-1290 *****
+11/18/2021 17:53:56 - INFO - __main__ -     perplexity = tensor(17.2968, dtype=torch.float64)
+11/18/2021 17:53:56 - INFO - __main__ -   lr: 0.000001, step: 1290, loss: 2.369841, ppl: -3.620515 
+11/18/2021 17:54:07 - INFO - __main__ -   ***** Running evaluation checkpoint-1320 *****
+11/18/2021 17:54:07 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:54:07 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:54:18 - INFO - __main__ -   ***** Eval results checkpoint-1320 *****
+11/18/2021 17:54:18 - INFO - __main__ -     perplexity = tensor(17.2942, dtype=torch.float64)
+11/18/2021 17:54:18 - INFO - __main__ -   lr: 0.000000, step: 1320, loss: 2.356412, ppl: -3.553116 
+11/18/2021 17:54:23 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-1320
+11/18/2021 17:54:27 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42/checkpoint-1320
+11/18/2021 17:54:33 - INFO - __main__ -    global_step = 1335, average loss = 2.632345655794894
+11/18/2021 17:54:33 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42
+11/18/2021 17:54:44 - INFO - __main__ -   Evaluate the following checkpoints: ['/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42']
+11/18/2021 17:54:50 - INFO - __main__ -   ***** Running evaluation  *****
+11/18/2021 17:54:50 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:54:50 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:55:01 - INFO - __main__ -   ***** Eval results  *****
+11/18/2021 17:55:01 - INFO - __main__ -     perplexity = tensor(17.2763, dtype=torch.float64)
+Namespace(adam_epsilon=1e-08, block_size=512, cache_dir='/data//fourth_next/phy_diag/data/cached', data_path='./dataset', do_eval=True, do_train=True, eval_all_checkpoints=False, eval_file_name='devWithStrategy_short.tsv', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', generate_and_eval=False, generation=False, gradient_accumulation_steps=2, learning_rate=2e-05, local_rank=-1, logging_steps=30, max_grad_norm=1.0, max_steps=-1, mode='train', model_name_or_path='/data/pretrained_models/blender_small', model_type='baseline', no_cuda=False, num_train_epochs=5, output_dir='/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr2_e5_seed42', overwrite_cache=True, overwrite_output_dir=True, per_gpu_eval_batch_size=8, per_gpu_train_batch_size=16, role=False, save_steps=120, save_total_limit=False, seed=42, should_continue=False, strategy=True, train_file_name='trainWithStrategy_short.tsv', turn=False, warmup_steps=120, weight_decay=0.0)
+87,580,160 total parameters.
+87,580,160 training parameters.
+11/18/2021 17:55:05 - WARNING - __main__ -   Process rank: -1, device: cuda, n_gpu: 1, distributed training: False, 16-bits training: False
+Some weights of BlenderbotSmallForConditionalGeneration were not initialized from the model checkpoint at /data/pretrained_models/blender_small and are newly initialized: ['model.decoder.wre.weight', 'model.decoder.wte.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+11/18/2021 17:55:18 - INFO - __main__ -   Training/evaluation parameters Namespace(adam_epsilon=1e-08, block_size=512, cache_dir='/data//fourth_next/phy_diag/data/cached', data_path='./dataset', device=device(type='cuda'), do_eval=True, do_train=True, eval_all_checkpoints=False, eval_file_name='devWithStrategy_short.tsv', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', generate_and_eval=False, generation=False, gradient_accumulation_steps=2, learning_rate=5e-05, local_rank=-1, logging_steps=30, max_grad_norm=1.0, max_steps=-1, mode='train', model_name_or_path='/data/pretrained_models/blender_small', model_type='baseline', n_gpu=1, no_cuda=False, num_train_epochs=5, output_dir='/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42', overwrite_cache=True, overwrite_output_dir=True, per_gpu_eval_batch_size=8, per_gpu_train_batch_size=16, role=False, save_steps=120, save_total_limit=False, seed=42, should_continue=False, strategy=True, train_file_name='trainWithStrategy_short.tsv', turn=False, warmup_steps=120, weight_decay=0.0)
+11/18/2021 17:55:18 - INFO - __main__ -   Creating features from dataset file at /data//fourth_next/phy_diag/data/cached
+11/18/2021 17:55:23 - INFO - __main__ -   Saving features into cached file /data//fourth_next/phy_diag/data/cached/baseline_cached_lm_512train
+11/18/2021 17:55:23 - INFO - __main__ -   Creating features from dataset file at /data//fourth_next/phy_diag/data/cached
+11/18/2021 17:55:37 - INFO - __main__ -   Saving features into cached file /data//fourth_next/phy_diag/data/cached/baseline_cached_lm_512train
+11/18/2021 17:55:38 - INFO - __main__ -   ***** Running training *****
+11/18/2021 17:55:38 - INFO - __main__ -     Num examples = 8562
+11/18/2021 17:55:38 - INFO - __main__ -     Num Epochs = 5
+11/18/2021 17:55:38 - INFO - __main__ -     Instantaneous batch size per GPU = 16
+11/18/2021 17:55:38 - INFO - __main__ -     Total train batch size (w. parallel, distributed & accumulation) = 32
+11/18/2021 17:55:38 - INFO - __main__ -     Gradient Accumulation steps = 2
+11/18/2021 17:55:38 - INFO - __main__ -     Total optimization steps = 1335
+11/18/2021 17:55:49 - INFO - __main__ -   ***** Running evaluation checkpoint-30 *****
+11/18/2021 17:55:49 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:55:49 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:56:00 - INFO - __main__ -   ***** Eval results checkpoint-30 *****
+11/18/2021 17:56:00 - INFO - __main__ -     perplexity = tensor(26.5176, dtype=torch.float64)
+/home/.pw/.conda/envs/hug/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:247: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+11/18/2021 17:56:00 - INFO - __main__ -   lr: 0.000013, step: 30, loss: 3.775706, ppl: -2.434802 
+11/18/2021 17:56:11 - INFO - __main__ -   ***** Running evaluation checkpoint-60 *****
+11/18/2021 17:56:11 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:56:11 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:56:21 - INFO - __main__ -   ***** Eval results checkpoint-60 *****
+11/18/2021 17:56:21 - INFO - __main__ -     perplexity = tensor(21.2072, dtype=torch.float64)
+11/18/2021 17:56:21 - INFO - __main__ -   lr: 0.000025, step: 60, loss: 3.136374, ppl: -3.394901 
+11/18/2021 17:56:32 - INFO - __main__ -   ***** Running evaluation checkpoint-90 *****
+11/18/2021 17:56:32 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:56:32 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:56:42 - INFO - __main__ -   ***** Eval results checkpoint-90 *****
+11/18/2021 17:56:42 - INFO - __main__ -     perplexity = tensor(19.6714, dtype=torch.float64)
+11/18/2021 17:56:42 - INFO - __main__ -   lr: 0.000038, step: 90, loss: 2.994827, ppl: -4.135416 
+11/18/2021 17:56:53 - INFO - __main__ -   ***** Running evaluation checkpoint-120 *****
+11/18/2021 17:56:53 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:56:53 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:57:04 - INFO - __main__ -   ***** Eval results checkpoint-120 *****
+11/18/2021 17:57:04 - INFO - __main__ -     perplexity = tensor(19.2394, dtype=torch.float64)
+11/18/2021 17:57:04 - INFO - __main__ -   lr: 0.000050, step: 120, loss: 2.955241, ppl: -3.009082 
+11/18/2021 17:57:09 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-120
+/home/.pw/.conda/envs/hug/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:216: UserWarning: Please also save or load the state of the optimizer when saving or loading the scheduler.
+  warnings.warn(SAVE_STATE_WARNING, UserWarning)
+11/18/2021 17:57:13 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-120
+11/18/2021 17:57:24 - INFO - __main__ -   ***** Running evaluation checkpoint-150 *****
+11/18/2021 17:57:24 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:57:24 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:57:34 - INFO - __main__ -   ***** Eval results checkpoint-150 *****
+11/18/2021 17:57:34 - INFO - __main__ -     perplexity = tensor(18.8914, dtype=torch.float64)
+11/18/2021 17:57:34 - INFO - __main__ -   lr: 0.000049, step: 150, loss: 2.921616, ppl: -3.410741 
+11/18/2021 17:57:44 - INFO - __main__ -   ***** Running evaluation checkpoint-180 *****
+11/18/2021 17:57:44 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:57:44 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:57:55 - INFO - __main__ -   ***** Eval results checkpoint-180 *****
+11/18/2021 17:57:55 - INFO - __main__ -     perplexity = tensor(18.7288, dtype=torch.float64)
+11/18/2021 17:57:55 - INFO - __main__ -   lr: 0.000048, step: 180, loss: 2.932589, ppl: -4.175858 
+11/18/2021 17:58:05 - INFO - __main__ -   ***** Running evaluation checkpoint-210 *****
+11/18/2021 17:58:05 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:58:05 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:58:16 - INFO - __main__ -   ***** Eval results checkpoint-210 *****
+11/18/2021 17:58:16 - INFO - __main__ -     perplexity = tensor(18.0459, dtype=torch.float64)
+11/18/2021 17:58:16 - INFO - __main__ -   lr: 0.000046, step: 210, loss: 2.844381, ppl: -4.922754 
+11/18/2021 17:58:27 - INFO - __main__ -   ***** Running evaluation checkpoint-240 *****
+11/18/2021 17:58:27 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:58:27 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:58:37 - INFO - __main__ -   ***** Eval results checkpoint-240 *****
+11/18/2021 17:58:37 - INFO - __main__ -     perplexity = tensor(17.8963, dtype=torch.float64)
+11/18/2021 17:58:37 - INFO - __main__ -   lr: 0.000045, step: 240, loss: 2.820177, ppl: -3.877550 
+11/18/2021 17:58:42 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-240
+11/18/2021 17:58:47 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-240
+11/18/2021 17:58:58 - INFO - __main__ -   ***** Running evaluation checkpoint-270 *****
+11/18/2021 17:58:58 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:58:58 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:59:08 - INFO - __main__ -   ***** Eval results checkpoint-270 *****
+11/18/2021 17:59:08 - INFO - __main__ -     perplexity = tensor(17.7153, dtype=torch.float64)
+11/18/2021 17:59:08 - INFO - __main__ -   lr: 0.000044, step: 270, loss: 2.826386, ppl: -4.105504 
+11/18/2021 17:59:19 - INFO - __main__ -   ***** Running evaluation checkpoint-300 *****
+11/18/2021 17:59:19 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:59:19 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:59:29 - INFO - __main__ -   ***** Eval results checkpoint-300 *****
+11/18/2021 17:59:29 - INFO - __main__ -     perplexity = tensor(18.0087, dtype=torch.float64)
+11/18/2021 17:59:29 - INFO - __main__ -   lr: 0.000043, step: 300, loss: 2.605324, ppl: -4.124782 
+11/18/2021 17:59:40 - INFO - __main__ -   ***** Running evaluation checkpoint-330 *****
+11/18/2021 17:59:40 - INFO - __main__ -     Num examples = 2985
+11/18/2021 17:59:40 - INFO - __main__ -     Batch size = 8
+11/18/2021 17:59:50 - INFO - __main__ -   ***** Eval results checkpoint-330 *****
+11/18/2021 17:59:50 - INFO - __main__ -     perplexity = tensor(17.8114, dtype=torch.float64)
+11/18/2021 17:59:50 - INFO - __main__ -   lr: 0.000041, step: 330, loss: 2.520753, ppl: -4.094008 
+11/18/2021 18:00:02 - INFO - __main__ -   ***** Running evaluation checkpoint-360 *****
+11/18/2021 18:00:02 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:00:02 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:00:14 - INFO - __main__ -   ***** Eval results checkpoint-360 *****
+11/18/2021 18:00:14 - INFO - __main__ -     perplexity = tensor(17.7118, dtype=torch.float64)
+11/18/2021 18:00:14 - INFO - __main__ -   lr: 0.000040, step: 360, loss: 2.551742, ppl: -5.006233 
+11/18/2021 18:00:19 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-360
+11/18/2021 18:00:24 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-360
+11/18/2021 18:00:34 - INFO - __main__ -   ***** Running evaluation checkpoint-390 *****
+11/18/2021 18:00:34 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:00:34 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:00:45 - INFO - __main__ -   ***** Eval results checkpoint-390 *****
+11/18/2021 18:00:45 - INFO - __main__ -     perplexity = tensor(17.8396, dtype=torch.float64)
+11/18/2021 18:00:45 - INFO - __main__ -   lr: 0.000039, step: 390, loss: 2.600526, ppl: -5.049656 
+11/18/2021 18:00:55 - INFO - __main__ -   ***** Running evaluation checkpoint-420 *****
+11/18/2021 18:00:55 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:00:55 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:01:07 - INFO - __main__ -   ***** Eval results checkpoint-420 *****
+11/18/2021 18:01:07 - INFO - __main__ -     perplexity = tensor(17.7966, dtype=torch.float64)
+11/18/2021 18:01:07 - INFO - __main__ -   lr: 0.000038, step: 420, loss: 2.526729, ppl: -5.442309 
+11/18/2021 18:01:19 - INFO - __main__ -   ***** Running evaluation checkpoint-450 *****
+11/18/2021 18:01:19 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:01:19 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:01:32 - INFO - __main__ -   ***** Eval results checkpoint-450 *****
+11/18/2021 18:01:32 - INFO - __main__ -     perplexity = tensor(17.5833, dtype=torch.float64)
+11/18/2021 18:01:32 - INFO - __main__ -   lr: 0.000036, step: 450, loss: 2.544604, ppl: -5.936595 
+11/18/2021 18:01:44 - INFO - __main__ -   ***** Running evaluation checkpoint-480 *****
+11/18/2021 18:01:44 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:01:44 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:01:56 - INFO - __main__ -   ***** Eval results checkpoint-480 *****
+11/18/2021 18:01:56 - INFO - __main__ -     perplexity = tensor(17.6251, dtype=torch.float64)
+11/18/2021 18:01:56 - INFO - __main__ -   lr: 0.000035, step: 480, loss: 2.531990, ppl: -5.236185 
+11/18/2021 18:02:01 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-480
+11/18/2021 18:02:06 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-480
+11/18/2021 18:02:18 - INFO - __main__ -   ***** Running evaluation checkpoint-510 *****
+11/18/2021 18:02:18 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:02:18 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:02:31 - INFO - __main__ -   ***** Eval results checkpoint-510 *****
+11/18/2021 18:02:31 - INFO - __main__ -     perplexity = tensor(17.2658, dtype=torch.float64)
+11/18/2021 18:02:31 - INFO - __main__ -   lr: 0.000034, step: 510, loss: 2.547426, ppl: -5.007384 
+11/18/2021 18:02:42 - INFO - __main__ -   ***** Running evaluation checkpoint-540 *****
+11/18/2021 18:02:42 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:02:42 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:02:54 - INFO - __main__ -   ***** Eval results checkpoint-540 *****
+11/18/2021 18:02:54 - INFO - __main__ -     perplexity = tensor(17.5644, dtype=torch.float64)
+11/18/2021 18:02:54 - INFO - __main__ -   lr: 0.000033, step: 540, loss: 2.524974, ppl: -6.474571 
+11/18/2021 18:03:06 - INFO - __main__ -   ***** Running evaluation checkpoint-570 *****
+11/18/2021 18:03:06 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:03:06 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:03:18 - INFO - __main__ -   ***** Eval results checkpoint-570 *****
+11/18/2021 18:03:18 - INFO - __main__ -     perplexity = tensor(18.2095, dtype=torch.float64)
+11/18/2021 18:03:18 - INFO - __main__ -   lr: 0.000031, step: 570, loss: 2.244800, ppl: -3.967679 
+11/18/2021 18:03:30 - INFO - __main__ -   ***** Running evaluation checkpoint-600 *****
+11/18/2021 18:03:30 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:03:30 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:03:43 - INFO - __main__ -   ***** Eval results checkpoint-600 *****
+11/18/2021 18:03:43 - INFO - __main__ -     perplexity = tensor(18.2640, dtype=torch.float64)
+11/18/2021 18:03:43 - INFO - __main__ -   lr: 0.000030, step: 600, loss: 2.272115, ppl: -4.120900 
+11/18/2021 18:03:48 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-600
+11/18/2021 18:03:52 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-600
+11/18/2021 18:04:04 - INFO - __main__ -   ***** Running evaluation checkpoint-630 *****
+11/18/2021 18:04:04 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:04:04 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:04:17 - INFO - __main__ -   ***** Eval results checkpoint-630 *****
+11/18/2021 18:04:17 - INFO - __main__ -     perplexity = tensor(18.2642, dtype=torch.float64)
+11/18/2021 18:04:17 - INFO - __main__ -   lr: 0.000029, step: 630, loss: 2.324459, ppl: -5.273099 
+11/18/2021 18:04:28 - INFO - __main__ -   ***** Running evaluation checkpoint-660 *****
+11/18/2021 18:04:28 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:04:28 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:04:41 - INFO - __main__ -   ***** Eval results checkpoint-660 *****
+11/18/2021 18:04:41 - INFO - __main__ -     perplexity = tensor(18.1446, dtype=torch.float64)
+11/18/2021 18:04:41 - INFO - __main__ -   lr: 0.000028, step: 660, loss: 2.308365, ppl: -5.372121 
+11/18/2021 18:04:52 - INFO - __main__ -   ***** Running evaluation checkpoint-690 *****
+11/18/2021 18:04:52 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:04:52 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:05:05 - INFO - __main__ -   ***** Eval results checkpoint-690 *****
+11/18/2021 18:05:05 - INFO - __main__ -     perplexity = tensor(18.0384, dtype=torch.float64)
+11/18/2021 18:05:05 - INFO - __main__ -   lr: 0.000027, step: 690, loss: 2.271906, ppl: -5.109799 
+11/18/2021 18:05:16 - INFO - __main__ -   ***** Running evaluation checkpoint-720 *****
+11/18/2021 18:05:16 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:05:16 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:05:28 - INFO - __main__ -   ***** Eval results checkpoint-720 *****
+11/18/2021 18:05:28 - INFO - __main__ -     perplexity = tensor(17.9645, dtype=torch.float64)
+11/18/2021 18:05:28 - INFO - __main__ -   lr: 0.000025, step: 720, loss: 2.293692, ppl: -5.413961 
+11/18/2021 18:05:33 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-720
+11/18/2021 18:05:38 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-720
+11/18/2021 18:05:50 - INFO - __main__ -   ***** Running evaluation checkpoint-750 *****
+11/18/2021 18:05:50 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:05:50 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:06:02 - INFO - __main__ -   ***** Eval results checkpoint-750 *****
+11/18/2021 18:06:02 - INFO - __main__ -     perplexity = tensor(18.0283, dtype=torch.float64)
+11/18/2021 18:06:02 - INFO - __main__ -   lr: 0.000024, step: 750, loss: 2.314126, ppl: -4.539578 
+11/18/2021 18:06:13 - INFO - __main__ -   ***** Running evaluation checkpoint-780 *****
+11/18/2021 18:06:13 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:06:13 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:06:23 - INFO - __main__ -   ***** Eval results checkpoint-780 *****
+11/18/2021 18:06:23 - INFO - __main__ -     perplexity = tensor(17.7763, dtype=torch.float64)
+11/18/2021 18:06:23 - INFO - __main__ -   lr: 0.000023, step: 780, loss: 2.332663, ppl: -5.077579 
+11/18/2021 18:06:34 - INFO - __main__ -   ***** Running evaluation checkpoint-810 *****
+11/18/2021 18:06:34 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:06:34 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:06:45 - INFO - __main__ -   ***** Eval results checkpoint-810 *****
+11/18/2021 18:06:45 - INFO - __main__ -     perplexity = tensor(18.1818, dtype=torch.float64)
+11/18/2021 18:06:45 - INFO - __main__ -   lr: 0.000022, step: 810, loss: 2.268410, ppl: -5.091175 
+11/18/2021 18:06:57 - INFO - __main__ -   ***** Running evaluation checkpoint-840 *****
+11/18/2021 18:06:57 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:06:57 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:07:10 - INFO - __main__ -   ***** Eval results checkpoint-840 *****
+11/18/2021 18:07:10 - INFO - __main__ -     perplexity = tensor(18.5147, dtype=torch.float64)
+11/18/2021 18:07:10 - INFO - __main__ -   lr: 0.000020, step: 840, loss: 2.049084, ppl: -4.554040 
+11/18/2021 18:07:15 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-840
+11/18/2021 18:07:19 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-840
+11/18/2021 18:07:31 - INFO - __main__ -   ***** Running evaluation checkpoint-870 *****
+11/18/2021 18:07:31 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:07:31 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:07:44 - INFO - __main__ -   ***** Eval results checkpoint-870 *****
+11/18/2021 18:07:44 - INFO - __main__ -     perplexity = tensor(18.4022, dtype=torch.float64)
+11/18/2021 18:07:44 - INFO - __main__ -   lr: 0.000019, step: 870, loss: 2.125728, ppl: -4.306955 
+11/18/2021 18:07:55 - INFO - __main__ -   ***** Running evaluation checkpoint-900 *****
+11/18/2021 18:07:55 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:07:55 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:08:06 - INFO - __main__ -   ***** Eval results checkpoint-900 *****
+11/18/2021 18:08:06 - INFO - __main__ -     perplexity = tensor(18.4991, dtype=torch.float64)
+11/18/2021 18:08:06 - INFO - __main__ -   lr: 0.000018, step: 900, loss: 2.089073, ppl: -4.733797 
+11/18/2021 18:08:17 - INFO - __main__ -   ***** Running evaluation checkpoint-930 *****
+11/18/2021 18:08:17 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:08:17 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:08:27 - INFO - __main__ -   ***** Eval results checkpoint-930 *****
+11/18/2021 18:08:27 - INFO - __main__ -     perplexity = tensor(18.5997, dtype=torch.float64)
+11/18/2021 18:08:27 - INFO - __main__ -   lr: 0.000017, step: 930, loss: 2.083028, ppl: -4.795082 
+11/18/2021 18:08:39 - INFO - __main__ -   ***** Running evaluation checkpoint-960 *****
+11/18/2021 18:08:39 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:08:39 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:08:51 - INFO - __main__ -   ***** Eval results checkpoint-960 *****
+11/18/2021 18:08:51 - INFO - __main__ -     perplexity = tensor(18.5407, dtype=torch.float64)
+11/18/2021 18:08:51 - INFO - __main__ -   lr: 0.000015, step: 960, loss: 2.097154, ppl: -5.313756 
+11/18/2021 18:08:56 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-960
+11/18/2021 18:09:00 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-960
+11/18/2021 18:09:13 - INFO - __main__ -   ***** Running evaluation checkpoint-990 *****
+11/18/2021 18:09:13 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:09:13 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:09:25 - INFO - __main__ -   ***** Eval results checkpoint-990 *****
+11/18/2021 18:09:25 - INFO - __main__ -     perplexity = tensor(18.5701, dtype=torch.float64)
+11/18/2021 18:09:25 - INFO - __main__ -   lr: 0.000014, step: 990, loss: 2.133714, ppl: -4.537815 
+11/18/2021 18:09:37 - INFO - __main__ -   ***** Running evaluation checkpoint-1020 *****
+11/18/2021 18:09:37 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:09:37 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:09:49 - INFO - __main__ -   ***** Eval results checkpoint-1020 *****
+11/18/2021 18:09:49 - INFO - __main__ -     perplexity = tensor(18.5447, dtype=torch.float64)
+11/18/2021 18:09:49 - INFO - __main__ -   lr: 0.000013, step: 1020, loss: 2.088843, ppl: -5.064104 
+11/18/2021 18:10:01 - INFO - __main__ -   ***** Running evaluation checkpoint-1050 *****
+11/18/2021 18:10:01 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:10:01 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:10:13 - INFO - __main__ -   ***** Eval results checkpoint-1050 *****
+11/18/2021 18:10:13 - INFO - __main__ -     perplexity = tensor(18.7569, dtype=torch.float64)
+11/18/2021 18:10:13 - INFO - __main__ -   lr: 0.000012, step: 1050, loss: 2.135175, ppl: -4.577933 
+11/18/2021 18:10:25 - INFO - __main__ -   ***** Running evaluation checkpoint-1080 *****
+11/18/2021 18:10:25 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:10:25 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:10:37 - INFO - __main__ -   ***** Eval results checkpoint-1080 *****
+11/18/2021 18:10:37 - INFO - __main__ -     perplexity = tensor(18.9139, dtype=torch.float64)
+11/18/2021 18:10:37 - INFO - __main__ -   lr: 0.000010, step: 1080, loss: 2.074837, ppl: -5.031490 
+11/18/2021 18:10:42 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-1080
+11/18/2021 18:10:47 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-1080
+11/18/2021 18:10:59 - INFO - __main__ -   ***** Running evaluation checkpoint-1110 *****
+11/18/2021 18:10:59 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:10:59 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:11:11 - INFO - __main__ -   ***** Eval results checkpoint-1110 *****
+11/18/2021 18:11:11 - INFO - __main__ -     perplexity = tensor(19.1256, dtype=torch.float64)
+11/18/2021 18:11:11 - INFO - __main__ -   lr: 0.000009, step: 1110, loss: 1.988149, ppl: -4.454041 
+11/18/2021 18:11:22 - INFO - __main__ -   ***** Running evaluation checkpoint-1140 *****
+11/18/2021 18:11:22 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:11:22 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:11:35 - INFO - __main__ -   ***** Eval results checkpoint-1140 *****
+11/18/2021 18:11:35 - INFO - __main__ -     perplexity = tensor(19.2604, dtype=torch.float64)
+11/18/2021 18:11:35 - INFO - __main__ -   lr: 0.000008, step: 1140, loss: 2.004739, ppl: -4.676529 
+11/18/2021 18:11:46 - INFO - __main__ -   ***** Running evaluation checkpoint-1170 *****
+11/18/2021 18:11:46 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:11:46 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:11:56 - INFO - __main__ -   ***** Eval results checkpoint-1170 *****
+11/18/2021 18:11:56 - INFO - __main__ -     perplexity = tensor(19.1693, dtype=torch.float64)
+11/18/2021 18:11:56 - INFO - __main__ -   lr: 0.000007, step: 1170, loss: 1.987124, ppl: -4.830536 
+11/18/2021 18:12:07 - INFO - __main__ -   ***** Running evaluation checkpoint-1200 *****
+11/18/2021 18:12:07 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:12:07 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:12:17 - INFO - __main__ -   ***** Eval results checkpoint-1200 *****
+11/18/2021 18:12:17 - INFO - __main__ -     perplexity = tensor(19.2112, dtype=torch.float64)
+11/18/2021 18:12:17 - INFO - __main__ -   lr: 0.000006, step: 1200, loss: 1.953332, ppl: -5.092780 
+11/18/2021 18:12:22 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-1200
+11/18/2021 18:12:27 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-1200
+11/18/2021 18:12:38 - INFO - __main__ -   ***** Running evaluation checkpoint-1230 *****
+11/18/2021 18:12:38 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:12:38 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:12:51 - INFO - __main__ -   ***** Eval results checkpoint-1230 *****
+11/18/2021 18:12:51 - INFO - __main__ -     perplexity = tensor(19.1366, dtype=torch.float64)
+11/18/2021 18:12:51 - INFO - __main__ -   lr: 0.000004, step: 1230, loss: 1.965795, ppl: -4.773308 
+11/18/2021 18:13:03 - INFO - __main__ -   ***** Running evaluation checkpoint-1260 *****
+11/18/2021 18:13:03 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:13:03 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:13:15 - INFO - __main__ -   ***** Eval results checkpoint-1260 *****
+11/18/2021 18:13:15 - INFO - __main__ -     perplexity = tensor(19.0566, dtype=torch.float64)
+11/18/2021 18:13:15 - INFO - __main__ -   lr: 0.000003, step: 1260, loss: 2.002998, ppl: -4.818114 
+11/18/2021 18:13:27 - INFO - __main__ -   ***** Running evaluation checkpoint-1290 *****
+11/18/2021 18:13:27 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:13:27 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:13:39 - INFO - __main__ -   ***** Eval results checkpoint-1290 *****
+11/18/2021 18:13:39 - INFO - __main__ -     perplexity = tensor(19.0615, dtype=torch.float64)
+11/18/2021 18:13:39 - INFO - __main__ -   lr: 0.000002, step: 1290, loss: 1.965942, ppl: -5.105997 
+11/18/2021 18:13:51 - INFO - __main__ -   ***** Running evaluation checkpoint-1320 *****
+11/18/2021 18:13:51 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:13:51 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:14:03 - INFO - __main__ -   ***** Eval results checkpoint-1320 *****
+11/18/2021 18:14:03 - INFO - __main__ -     perplexity = tensor(19.0813, dtype=torch.float64)
+11/18/2021 18:14:03 - INFO - __main__ -   lr: 0.000001, step: 1320, loss: 1.957562, ppl: -4.940362 
+11/18/2021 18:14:08 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-1320
+11/18/2021 18:14:12 - INFO - __main__ -   Saving optimizer and scheduler states to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42/checkpoint-1320
+11/18/2021 18:14:18 - INFO - __main__ -    global_step = 1335, average loss = 2.393200319179435
+11/18/2021 18:14:18 - INFO - __main__ -   Saving model checkpoint to /data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42
+11/18/2021 18:14:30 - INFO - __main__ -   Evaluate the following checkpoints: ['/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42']
+11/18/2021 18:14:36 - INFO - __main__ -   ***** Running evaluation  *****
+11/18/2021 18:14:36 - INFO - __main__ -     Num examples = 2985
+11/18/2021 18:14:36 - INFO - __main__ -     Batch size = 8
+11/18/2021 18:14:48 - INFO - __main__ -   ***** Eval results  *****
+11/18/2021 18:14:48 - INFO - __main__ -     perplexity = tensor(19.1129, dtype=torch.float64)
+Namespace(adam_epsilon=1e-08, block_size=512, cache_dir='/data//fourth_next/phy_diag/data/cached', data_path='./dataset', do_eval=True, do_train=True, eval_all_checkpoints=False, eval_file_name='devWithStrategy_short.tsv', evaluate_during_training=True, fp16=False, fp16_opt_level='O1', generate_and_eval=False, generation=False, gradient_accumulation_steps=2, learning_rate=5e-05, local_rank=-1, logging_steps=30, max_grad_norm=1.0, max_steps=-1, mode='train', model_name_or_path='/data/pretrained_models/blender_small', model_type='baseline', no_cuda=False, num_train_epochs=5, output_dir='/data//fourth_next/phy_diag/blender_strategy/baseline_blender_small_gn1_bp16_gc2_lr5_e5_seed42', overwrite_cache=True, overwrite_output_dir=True, per_gpu_eval_batch_size=8, per_gpu_train_batch_size=16, role=False, save_steps=120, save_total_limit=False, seed=42, should_continue=False, strategy=True, train_file_name='trainWithStrategy_short.tsv', turn=False, warmup_steps=120, weight_decay=0.0)
+87,580,160 total parameters.
+87,580,160 training parameters.
